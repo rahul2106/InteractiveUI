@@ -137,7 +137,55 @@ opacity: 0.5;
 #watchedSection{
   overflow: auto;
 }
+.post{
+  border-radius: 10px !important;
+  background-color: #252836 !important;
+  margin: 0 0 0.7em 0;
+  width: 250px;
+}
+.postText{
+  display: flex;
+  justify-content: space-between;
+  padding: 3%;
+}
+.cardContent{
+  padding: 0 !important;
+}
+ .icon{
+  padding: 0.01em !important;
+}
+.postTitle{
+  font-family: Poppins;
+font-style: normal;
+font-weight: 500;
+font-size: 10px !important;
+line-height: 22px;
+letter-spacing: 0.3px;
+color: #FFFFFF;
+}
+#browsePosts{
+  padding:0.5em;
+}
 
+#like{
+  width: 30px;
+  height: 30px;
+  background: #EA5F5F;
+  -moz-border-radius: 70px;
+  -webkit-border-radius: 70px;
+  border-radius: 70px !important; 
+  color: #FFFFFF;
+}
+#share{
+  width: 30px;
+  height: 30px;
+  background: #6C5ECF;
+  -moz-border-radius: 70px;
+  -webkit-border-radius: 70px;
+  border-radius: 70px !important;
+  color: #FFFFFF;
+  padding: 0.01em;
+}
 @media only screen and (max-width: 767px) {
   #poster{
     overflow: auto;
