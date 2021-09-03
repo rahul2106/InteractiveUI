@@ -6,15 +6,22 @@ import HomeRoundedIcon from '@material-ui/icons/HomeRounded';
 import VideocamRoundedIcon from '@material-ui/icons/VideocamRounded';
 import TurnedInRoundedIcon from '@material-ui/icons/TurnedInRounded';
 import ViewModuleRoundedIcon from '@material-ui/icons/ViewModuleRounded';
-
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+} from "react-router-dom";
+import Discover from './Discover';
+import Browse from './Browse';
 const Menu = () => {
     const useStyles = {
-        'background-color':'#252836'
+        'background-color': '#252836'
     }
 
     const [value, setValue] = React.useState(0);
     return (
-        <div>
+        <Router>
             <BottomNavigation
                 value={value}
                 onChange={(event, newValue) => {
@@ -24,12 +31,23 @@ const Menu = () => {
                 className='nav'
                 style={useStyles}
             >
-                <BottomNavigationAction className='nav-item' label="Discover" icon={<HomeRoundedIcon />} />
-                <BottomNavigationAction className='nav-item' label="Browse" icon={<VideocamRoundedIcon />} />
-                <BottomNavigationAction className='nav-item' label="Bookmarks" icon={<TurnedInRoundedIcon />} />
-                <BottomNavigationAction className='nav-item' label="More" icon={<ViewModuleRoundedIcon />} />
+                <BottomNavigationAction component={Link} to="/" className='nav-item' label="Discover" icon={<HomeRoundedIcon />} />
+                <BottomNavigationAction component={Link} exact to="/browse" className='nav-item' label="Browse" icon={<VideocamRoundedIcon />} />
+                <BottomNavigationAction component={Link} to="/" className='nav-item' label="Bookmarks" icon={<TurnedInRoundedIcon />} />
+                <BottomNavigationAction component={Link} to="/" className='nav-item' label="More" icon={<ViewModuleRoundedIcon />} />
             </BottomNavigation>
-        </div>
+            {/* A <Switch> looks through its children <Route>s and
+            renders the first one that matches the current URL. */}
+            <Switch>
+                <Route exact path="/">
+                    <Discover />
+                </Route>
+                <Route exact path="/Browse">
+                    <Browse />
+                </Route>
+
+            </Switch>
+        </Router>
     )
 }
 

@@ -8,7 +8,7 @@ import WatchedPost from './WatchedPost'
 const Discover = () => {
 
     return (
-        <div id='discover'>
+        <div id='discover' className='container'>
             <Header label="Discover"/>
             <Story/>
             <Poster/>

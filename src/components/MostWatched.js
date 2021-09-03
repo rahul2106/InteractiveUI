@@ -12,7 +12,19 @@ days:"2"
     author:"Hordan Wise",
     view:"125,908",
     days:"2" 
-}];
+},{
+    title:"Basic how to ride your skateboard comfortly",
+    author:"Hordan Wise",
+    view:"125,908",
+    days:"2" 
+},
+{
+    title:"Prepare for your first skateboard jump",
+    author:"Hordan Wise",
+    view:"125,908",
+    days:"2"
+    },
+];
 
 
 
@@ -26,7 +38,7 @@ days:"2"
                 days={heading.day}
             
             />)}</div>
-            <div className='watchedPart'>{watched.map((heading, index) =>
+             <div className='watchedPart'>{watched.map((heading, index) =>
              <WatchedPost className='story' key={index} 
                 title={heading.title}
                 author={heading.author}
@@ -34,6 +46,7 @@ days:"2"
                 days={heading.day}
             
             />)}</div>
+           
             
            
         </div>

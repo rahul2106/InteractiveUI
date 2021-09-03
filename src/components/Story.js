@@ -32,6 +32,7 @@ export const Story = () => {
             {avaImg.map((heading, index) =>
             <div>
                <Badge
+               key={index}
         overlap="circular"
         anchorOrigin={{
           vertical: 'bottom',

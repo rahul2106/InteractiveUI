@@ -17,6 +17,14 @@ const Poster = () => {
             duration={posterData[0].duration }/>
              <PosterText title={posterData[0].title } author={posterData[0].author } 
             duration={posterData[0].duration }/>
+               <PosterText title={posterData[0].title } author={posterData[0].author } 
+            duration={posterData[0].duration }/>
+               <PosterText title={posterData[0].title } author={posterData[0].author } 
+            duration={posterData[0].duration }/>
+               <PosterText title={posterData[0].title } author={posterData[0].author } 
+            duration={posterData[0].duration }/>
+               <PosterText title={posterData[0].title } author={posterData[0].author } 
+            duration={posterData[0].duration }/>
         </div>
     )
 }
